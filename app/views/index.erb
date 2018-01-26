@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All The Comedians</title>
+  </head>
+  <body>
+    <p>Comedians Available</p>
+    <ul>
+    <% @comedians.each do |comedian| %>
+    <li><%= comedian.name %>
+        <%= comedian.age %></li>
+        <% @specials.each do |special| %>
+          <% if comedian.id == special.comedian_id %>
+          <ul><%= special.name %></ul>
+          <% end %>
+          <% end %>
+    <% end %>
+  </ul>
+  </body>
+</html>
